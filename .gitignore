@@ -20,6 +20,7 @@ pids
 node_modules
 
 ### Bower dependency directory ###
+bower_components
 !/.bowerrc
 
 ### Build output directory ###
