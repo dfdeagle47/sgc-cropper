@@ -18,7 +18,8 @@
 		"requirejs": "^2.1.14",
 		"backbone": "^1.1.2",
 		"jquery": "^2.1.1",
-		"marionette": "^2.2.0"
+		"marionette": "^2.2.0",
+		"Jcrop": "^0.9.12"
 	},
 	"resolutions": {
 		"underscore": "1.7.0"

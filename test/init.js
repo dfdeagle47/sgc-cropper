@@ -16,12 +16,16 @@ require.config({
 		},
 
 		'SGCCropper': {
-			deps: ['marionette']
+			deps: ['marionette', 'jcrop']
 		},
 
 		'marionette': {
 			exports: 'marionette',
 			deps: ['backbone']
+		}, 
+
+		'jcrop': {
+			deps: ['jquery']
 		}
 	},
 	paths: {
@@ -29,6 +33,7 @@ require.config({
 		'backbone': '../bower_components/backbone/backbone',
 		'underscore': '../bower_components/underscore/underscore',
 		'marionette': '../bower_components/marionette/lib/backbone.marionette',
+		'jcrop': '../bower_components/Jcrop/js/jquery.Jcrop.min',
 
 		'mocha': '../node_modules/mocha/mocha',
 		'chai': '../node_modules/chai/chai',
