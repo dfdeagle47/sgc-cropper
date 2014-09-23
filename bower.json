@@ -1,0 +1,35 @@
+{
+	"name": "sgc-cropper",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Sagacify's client data cropper module.",
+	"main": "dist/sgc-cropper.min.js",
+	"keywords": [
+		"image",
+		"view"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Sagacify/sgc-cropper.git"
+	},
+	"ignore": {},
+	"dependencies": {
+		"underscore": "^1.7.0",
+		"requirejs": "^2.1.14",
+		"backbone": "^1.1.2",
+		"jquery": "^2.1.1",
+		"marionette": "^2.2.0"
+	},
+	"resolutions": {
+		"underscore": "1.7.0"
+	},
+
+	"author": {
+		"name": "Sagacify Team",
+		"email": "info@sagacify.com"
+	},
+	"bugs": {
+		"url": "https://github.com/Sagacify/sgc-cropper/issues"
+	},
+	"homepage": "https://github.com/Sagacify/sgc-cropper"
+}
