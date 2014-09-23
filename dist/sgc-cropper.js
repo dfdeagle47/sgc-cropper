@@ -45,7 +45,20 @@ define('CropModal',[
 define('jquery-crop',[
 ], function () {
 	
-	
+
+	$.fn.sgJcrop = function (options) {
+		var me = this;
+		this.Jcrop(options, function () {
+			me.jcrop_api = this;
+		});
+		this.actualImgWidth = me[0].width;
+		this.actualImgHeight = me[0].height;
+		this.load(function(){
+			me.actualImgWidth = me[0].width;
+			me.actualImgHeight = me[0].height;
+		});
+	};
+
 	$.fn.sgCrop = function (canvas) {
 		if (!canvas) {
 			return;
