@@ -14,7 +14,6 @@ define([
 		cropImg: function () {
 			var base64 = this.outlets.img.sgCrop(300);
 			this.trigger('crop', base64);
-			this.close();
 		},
 
 		onRender: function () {
