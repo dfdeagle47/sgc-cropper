@@ -17,12 +17,10 @@ define([
 		},
 
 		onRender: function () {
-			var fr = new FileReader();
-			fr.readAsDataURL(this.imageFile);
 			var me = this;
-			fr.onload = function (evt) {
-				me.outlets.img.attr('src', evt.target.result);
-			};
+			$(this.imageFile).fileUrlToBase64(function(base64){
+				me.outlets.img.attr('src', base64);
+			});
 		},
 
 		imageLoaded: function(){

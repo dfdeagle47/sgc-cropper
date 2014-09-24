@@ -17,12 +17,10 @@ define('CropModal',[
 		},
 
 		onRender: function () {
-			var fr = new FileReader();
-			fr.readAsDataURL(this.imageFile);
 			var me = this;
-			fr.onload = function (evt) {
-				me.outlets.img.attr('src', evt.target.result);
-			};
+			$(this.imageFile).fileUrlToBase64(function(base64){
+				me.outlets.img.attr('src', base64);
+			});
 		},
 
 		imageLoaded: function(){
@@ -44,6 +42,14 @@ define('CropModal',[
 define('jquery-crop',[
 ], function () {
 	
+
+	$.fn.fileUrlToBase64 = function(callback){
+		var fr = new FileReader();
+		fr.readAsDataURL(this.get(0));
+		fr.onload = function (evt) {
+			callback(evt.target.result)
+		};
+	};
 
 	$.fn.sgJcrop = function (options) {
 		var me = this;

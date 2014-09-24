@@ -2,6 +2,14 @@ define([
 ], function () {
 	'use strict';
 
+	$.fn.fileUrlToBase64 = function(callback){
+		var fr = new FileReader();
+		fr.readAsDataURL(this.get(0));
+		fr.onload = function (evt) {
+			callback(evt.target.result)
+		};
+	};
+
 	$.fn.sgJcrop = function (options) {
 		var me = this;
 		this.Jcrop(options, function () {
